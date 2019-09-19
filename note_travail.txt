@@ -1,0 +1,51 @@
+creation Dockerfile
+====================
+FROM nginx:alpine
+Copy index.html  /usr/share/nginx/html/index.html
+
+
+notes 
+=====
+tarification:
+750h -> par mois
+attention a diviser sur le nombre d instance
+root53=> dns 
+ Install-WindowsFeature -name web-server  -IncludeAllSubFeature -IncludeManagementTools
+ 
+
+
+Build
+=====
+sudo docker ps
+      # sudo usermod -aG docker vagrant
+     sudo usermod -aG docker vagrant
+     . ./.bash_rc
+     . ./.bashrc
+     docker images
+     exit
+     docker images
+     curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+     az
+     az login
+     ls /vagrant/
+     az login registryppa.azurecr.io
+     az login
+     az acr login --name registryppa
+     docker pull hello-world
+     docker pull nginx:1.17.3
+     docker tag hello-world mm167.azurecr.io/hello-world:v1
+     docker tag hello-world registryppa.azurecr.io/hello-world:v1
+     docker tag hello-world registryppa.azurecr.io/nginx:1.17.3
+     docker push registryppa.azurecr.io/hello-world:v1
+     docker push  registryppa.azurecr.io/nginx:1.17.3
+     docker run  registryppa.azurecr.io/hello-world:v1
+
+     cd /vagrant/TP/
+     docker build -t simple-nginx .
+     docker tag simple-nginx  registryppa.azurecr.io/simple-nginx:v1
+     docker push  registryppa.azurecr.io/simple-nginx:v1
+     docker run -it -p 80:80 simple-nginx
+	 http://http://192.168.2.10/ ==> issue du vagrant file
+
+	
+https://docs.microsoft.com/fr-fr/azure/devops-project/
